@@ -5370,6 +5370,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["flip"],
@@ -5389,6 +5395,7 @@ __webpack_require__.r(__webpack_exports__);
     this.title = this.flip.title;
     this.sector = this.flip.sector;
     this.desc = this.flip.desc;
+    this.type = this.flip.type;
   },
   methods: {
     changePage: function changePage() {
@@ -5407,7 +5414,9 @@ __webpack_require__.r(__webpack_exports__);
       singlePage: false,
       pages: [],
       sector: "",
-      desc: ""
+      desc: "",
+      type: "",
+      sosmed: ["Facebook", "Line", "LinkedIn", "Pinterest", "WhatsApp"]
     };
   }
 });
@@ -5485,6 +5494,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_list_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/list.vue */ "./resources/js/components/list.vue");
 /* harmony import */ var _components_flip_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/flip.vue */ "./resources/js/components/flip.vue");
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+/* harmony import */ var vue_social_sharing__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-social-sharing */ "./node_modules/vue-social-sharing/dist/vue-social-sharing.js");
+/* harmony import */ var vue_social_sharing__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_social_sharing__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -5497,6 +5509,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"]);
+Vue.use((vue_social_sharing__WEBPACK_IMPORTED_MODULE_3___default()));
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -10833,7 +10846,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.share-btn:nth-child(1){\n    color: blue;\n}\n.share-btn:nth-child(2){\n    color: rgb(0, 174, 255);\n}\n.share-btn:nth-child(3){\n    color: rgb(255, 0, 217);\n}\n.share-btn:nth-child(4){\n    color: blue;\n}\n.share-btn {\n    font-size: 24px;\n    padding: 13px;\n    border: 1px solid #a2a2a2;\n    border-radius: 50%;\n    transition: 0.5s;\n}\n.share-btn:hover{\n    background-color: gray;\n}\nhtml,\nbody {\n    margin: 0;\n    padding: 0;\n}\n#flip {\n    font-family: \"Avenir\", Helvetica, Arial, sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    /* max-height: 90vh; */\n    width: 100%;\n    display: flex;\n    overflow: hidden;\n    flex-direction: column;\n    align-items: center;\n    /* background-color: #333; */\n    color: #ccc;\n}\na {\n    color: inherit;\n}\n.flipbook > button:first-child {\n    position: absolute;\n    top: 50%;\n    left: 10px;\n    border-radius: 50%;\n    z-index: 1;\n    padding: 8px 15px;\n}\n.flipbook > button:nth-child(2) {\n    position: absolute;\n    top: 50%;\n    right: 10px;\n    border-radius: 50%;\n    padding: 8px 15px;\n    z-index: 1;\n}\n.action-bar {\n    width: 100%;\n    height: 50px;\n    padding: 10px 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.action-bar .btn {\n    font-size: 30px;\n    color: #999;\n}\n.action-bar .btn svg {\n    bottom: 0;\n}\n.action-bar .btn:not(:first-child) {\n    margin-left: 10px;\n}\n.has-mouse .action-bar .btn:hover {\n    color: #ccc;\n    filter: drop-shadow(1px 1px 5px #000);\n    cursor: pointer;\n}\n.action-bar .btn:active {\n    filter: none !important;\n}\n.btn-left.disabled {\n    color: #666;\n    pointer-events: none;\n}\n.btn-right.disabled {\n    color: #666;\n    pointer-events: none;\n}\n.action-bar .page-num {\n    font-size: 12px;\n    margin-left: 10px;\n}\n.card-body .flipbook .viewport {\n    width: 80vw;\n    height: calc(100vh - 50px - 40px);\n}\n.card-body .flipbook .bounding-box {\n    box-shadow: 0 0 20px #000;\n}\n.credit {\n    font-size: 12px;\n    line-height: 20px;\n    margin: 10px;\n}\n.card-body {\n    color: #6e6e6e;\n    font-weight: 600;\n}\n.card-title {\n    font-weight: 900;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\ni.fa-lock {\n    position: absolute;\n    right: 15px;\n    top: 15px;\n    cursor: pointer;\n    color: #a2a2a2;\n}\n.sosmed:nth-child(1) i {\n    color: blue;\n}\n.sosmed:nth-child(2) i{\n    color: rgb(2, 219, 38);\n}\n.sosmed:nth-child(3) i{\n    color: rgb(0, 140, 255);\n}\n.sosmed:nth-child(4) i{\n    color: rgb(210, 5, 9);\n}\n.sosmed:nth-child(5) i{\n    color: rgb(0, 141, 16);\n}\n.share-btn {\n    font-size: 24px;\n    padding: 13px;\n    border: 1px solid #a2a2a2;\n    border-radius: 50%;\n    transition: 0.5s;\n}\n.share-btn:hover {\n    background-color: gray;\n}\nhtml,\nbody {\n    margin: 0;\n    padding: 0;\n}\n#flip {\n    font-family: \"Avenir\", Helvetica, Arial, sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    /* max-height: 90vh; */\n    width: 100%;\n    display: flex;\n    overflow: hidden;\n    flex-direction: column;\n    align-items: center;\n    /* background-color: #333; */\n    color: #ccc;\n}\na {\n    color: inherit;\n}\n.flipbook > button:first-child {\n    position: absolute;\n    top: 50%;\n    left: 10px;\n    border-radius: 50%;\n    z-index: 1;\n    padding: 8px 15px;\n}\n.flipbook > button:nth-child(2) {\n    position: absolute;\n    top: 50%;\n    right: 10px;\n    border-radius: 50%;\n    padding: 8px 15px;\n    z-index: 1;\n}\n.action-bar {\n    width: 100%;\n    height: 50px;\n    padding: 10px 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.action-bar .btn {\n    font-size: 30px;\n    color: #999;\n}\n.action-bar .btn svg {\n    bottom: 0;\n}\n.action-bar .btn:not(:first-child) {\n    margin-left: 10px;\n}\n.has-mouse .action-bar .btn:hover {\n    color: #ccc;\n    filter: drop-shadow(1px 1px 5px #000);\n    cursor: pointer;\n}\n.action-bar .btn:active {\n    filter: none !important;\n}\n.btn-left.disabled {\n    color: #666;\n    pointer-events: none;\n}\n.btn-right.disabled {\n    color: #666;\n    pointer-events: none;\n}\n.action-bar .page-num {\n    font-size: 12px;\n    margin-left: 10px;\n}\n.card-body .flipbook .viewport {\n    width: 80vw;\n    height: calc(100vh - 50px - 40px);\n}\n.card-body .flipbook .bounding-box {\n    box-shadow: 0 0 20px #000;\n}\n.credit {\n    font-size: 12px;\n    line-height: 20px;\n    margin: 10px;\n}\n.card-body {\n    color: #6e6e6e;\n    font-weight: 600;\n}\n.card-title {\n    font-weight: 900;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -30679,6 +30692,10 @@ var render = function () {
           _c("span", { staticClass: "badge bg-success rounded-pill ms-2" }, [
             _vm._v(_vm._s(_vm.sector)),
           ]),
+          _vm._v(" "),
+          _vm.type == "private"
+            ? _c("i", { staticClass: "fa fa-lock ml-auto" })
+            : _vm._e(),
         ]
       ),
     ]),
@@ -30731,77 +30748,52 @@ var render = function () {
       1
     ),
     _vm._v(" "),
-    _vm._m(0),
-  ])
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
+    _c(
       "div",
       {
         staticClass:
           "card-footer w-100 text-end text-dark text-capitalize p-3 py-4",
       },
-      [
-        _c(
-          "a",
-          {
-            staticClass: "share-btn shadow me-2",
-            attrs: {
-              href: "javascript:",
-              "data-bs-toggle": "tooltip",
-              "data-bs-placement": "top",
-              title: "Share to Facebook",
+      _vm._l(_vm.sosmed, function (sos) {
+        return _c("span", { staticClass: "sosmed" }, [
+          _c(
+            "a",
+            {
+              staticClass: "share-btn shadow me-2",
+              attrs: {
+                href: "javascript:",
+                "data-bs-target": "tooltib",
+                title: "Share on " + sos,
+              },
             },
-          },
-          [_c("i", { staticClass: "fab fa-facebook" })]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "share-btn shadow me-2",
-            attrs: {
-              href: "javascript:",
-              toggle: "tooltip",
-              title: "Share to Twitter",
-            },
-          },
-          [_c("i", { staticClass: "fab fa-twitter" })]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "share-btn shadow me-2",
-            attrs: {
-              href: "javascript:",
-              toggle: "tooltip",
-              title: "Share to Instagram",
-            },
-          },
-          [_c("i", { staticClass: "fab fa-instagram" })]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "share-btn shadow me-2",
-            attrs: {
-              href: "javascript:",
-              toggle: "tooltip",
-              title: "Share to LinkedIn",
-            },
-          },
-          [_c("i", { staticClass: "fab fa-linkedin" })]
-        ),
-      ]
-    )
-  },
-]
+            [
+              _c(
+                "ShareNetwork",
+                {
+                  attrs: {
+                    network: sos,
+                    url: "https://news.vuejs.org/issues/180",
+                    title:
+                      "Say hi to Vite! A brand new, extremely fast development setup for Vue.",
+                    description:
+                      "This week, I’d like to introduce you to 'Vite', which means 'Fast'. It’s a brand new development setup created by Evan You.",
+                    quote:
+                      "The hot reload is so fast it\\'s near instant. - Evan You",
+                    hashtags: "vuejs,vite",
+                  },
+                },
+                [_c("i", { class: "fab fa-" + sos.toLowerCase() })]
+              ),
+            ],
+            1
+          ),
+        ])
+      }),
+      0
+    ),
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -30969,6 +30961,16 @@ function normalizeComponent (
   }
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/vue-social-sharing/dist/vue-social-sharing.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/vue-social-sharing/dist/vue-social-sharing.js ***!
+  \********************************************************************/
+/***/ (function(module) {
+
+!function(t,e){ true?module.exports=e():0}("undefined"!=typeof self?self:this,(function(){return function(t){var e={};function i(r){if(e[r])return e[r].exports;var n=e[r]={i:r,l:!1,exports:{}};return t[r].call(n.exports,n,n.exports,i),n.l=!0,n.exports}return i.m=t,i.c=e,i.d=function(t,e,r){i.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},i.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},i.t=function(t,e){if(1&e&&(t=i(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(i.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var n in t)i.d(r,n,function(e){return t[e]}.bind(null,n));return r},i.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return i.d(e,"a",e),e},i.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},i.p="",i(i.s=0)}([function(t,e,i){t.exports=i(1)},function(t,e,i){"use strict";i.r(e),i.d(e,"ShareNetwork",(function(){return o}));var r={baidu:"http://cang.baidu.com/do/add?iu=@u&it=@t",buffer:"https://bufferapp.com/add?text=@t&url=@u",email:"mailto:?subject=@t&body=@u%0D%0A@d",evernote:"https://www.evernote.com/clip.action?url=@u&title=@t",facebook:"https://www.facebook.com/sharer/sharer.php?u=@u&title=@t&description=@d&quote=@q&hashtag=@h",flipboard:"https://share.flipboard.com/bookmarklet/popout?v=2&url=@u&title=@t",hackernews:"https://news.ycombinator.com/submitlink?u=@u&t=@t",instapaper:"http://www.instapaper.com/edit?url=@u&title=@t&description=@d",line:"http://line.me/R/msg/text/?@t%0D%0A@u%0D%0A@d",linkedin:"https://www.linkedin.com/sharing/share-offsite/?url=@u",messenger:"fb-messenger://share/?link=@u",odnoklassniki:"https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=@u&st.comments=@t",pinterest:"https://pinterest.com/pin/create/button/?url=@u&media=@m&description=@t",pocket:"https://getpocket.com/save?url=@u&title=@t",quora:"https://www.quora.com/share?url=@u&title=@t",reddit:"https://www.reddit.com/submit?url=@u&title=@t",skype:"https://web.skype.com/share?url=@t%0D%0A@u%0D%0A@d",sms:"sms:?body=@t%0D%0A@u%0D%0A@d",stumbleupon:"https://www.stumbleupon.com/submit?url=@u&title=@t",telegram:"https://t.me/share/url?url=@u&text=@t%0D%0A@d",tumblr:"https://www.tumblr.com/share/link?url=@u&name=@t&description=@d",twitter:"https://twitter.com/intent/tweet?text=@t&url=@u&hashtags=@h@tu",viber:"viber://forward?text=@t%0D%0A@u%0D%0A@d",vk:"https://vk.com/share.php?url=@u&title=@t&description=@d&image=@m&noparse=true",weibo:"http://service.weibo.com/share/share.php?url=@u&title=@t&pic=@m",whatsapp:"https://api.whatsapp.com/send?text=@t%0D%0A@u%0D%0A@d",wordpress:"https://wordpress.com/press-this.php?u=@u&t=@t&s=@d&i=@m",xing:"https://www.xing.com/social/share/spi?op=share&url=@u&title=@t",yammer:"https://www.yammer.com/messages/new?login=true&status=@t%0D%0A@u%0D%0A@d"},n="undefined"!=typeof window?window:null;var o={name:"ShareNetwork",props:{network:{type:String,required:!0},url:{type:String,required:!0},title:{type:String,required:!0},description:{type:String,default:""},quote:{type:String,default:""},hashtags:{type:String,default:""},twitterUser:{type:String,default:""},media:{type:String,default:""},tag:{type:String,default:"a"},popup:{type:Object,default:function(){return{width:626,height:436}}}},data:function(){return{popupTop:0,popupLeft:0,popupWindow:void 0,popupInterval:null}},computed:{networks:function(){return this.$SocialSharing?this.$SocialSharing.options.networks:r},key:function(){return this.network.toLowerCase()},rawLink:function(){var t=navigator.userAgent.toLowerCase();return"sms"===this.key&&(t.indexOf("iphone")>-1||t.indexOf("ipad")>-1)?this.networks[this.key].replace(":?",":&"):this.networks[this.key]},shareLink:function(){var t=this.rawLink;return"twitter"===this.key&&(this.hashtags.length||(t=t.replace("&hashtags=@h","")),this.twitterUser.length||(t=t.replace("@tu",""))),t.replace(/@tu/g,"&via="+encodeURIComponent(this.twitterUser)).replace(/@u/g,encodeURIComponent(this.url)).replace(/@t/g,encodeURIComponent(this.title)).replace(/@d/g,encodeURIComponent(this.description)).replace(/@q/g,encodeURIComponent(this.quote)).replace(/@h/g,this.encodedHashtags).replace(/@m/g,encodeURIComponent(this.media))},encodedHashtags:function(){return"facebook"===this.key&&this.hashtags.length?"%23"+this.hashtags.split(",")[0]:this.hashtags}},render:function(t){var e=this;if(!this.networks.hasOwnProperty(this.key))throw new Error("Network "+this.key+" does not exist");var i={class:"share-network-"+this.key,on:{click:function(){return e["http"===e.rawLink.substring(0,4)?"share":"touch"]()}}};return"a"===this.tag&&(i.attrs={href:"javascript:void(0)"}),t(this.tag,i,this.$slots.default)},methods:{resizePopup:function(){var t=n.innerWidth||document.documentElement.clientWidth||n.screenX,e=n.innerHeight||document.documentElement.clientHeight||n.screenY,i=t/n.screen.availWidth;this.popupLeft=(t-this.popup.width)/2/i+(void 0!==n.screenLeft?n.screenLeft:n.screenX),this.popupTop=(e-this.popup.height)/2/i+(void 0!==n.screenTop?n.screenTop:n.screenY)},share:function(){var t=this;this.resizePopup(),this.popupWindow&&this.popupInterval&&(clearInterval(this.popupInterval),this.popupWindow.close(),this.emit("change")),this.popupWindow=n.open(this.shareLink,"sharer-"+this.key,",height="+this.popup.height+",width="+this.popup.width+",left="+this.popupLeft+",top="+this.popupTop+",screenX="+this.popupLeft+",screenY="+this.popupTop),this.popupWindow&&(this.popupWindow.focus(),this.popupInterval=setInterval((function(){t.popupWindow&&!t.popupWindow.closed||(clearInterval(t.popupInterval),t.popupWindow=null,t.emit("close"))}),500),this.emit("open"))},touch:function(){window.open(this.shareLink,"_blank"),this.emit("open")},emit:function(t){this.$root.$emit("share_network_"+t,this.key,this.url),this.$emit(t,this.key,this.url)}}};e.default={install:function(t,e){t.component(o.name,o),t.prototype.$SocialSharing={options:{networks:e&&e.hasOwnProperty("networks")?Object.assign(r,e.networks):r}}}}}])}));
 
 /***/ }),
 

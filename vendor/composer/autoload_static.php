@@ -123,6 +123,10 @@ class ComposerStaticInit963bec9d848196d52e5604ec09efcdb3
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
         ),
+        'J' => 
+        array (
+            'Jorenvh\\Share\\' => 14,
+        ),
         'I' => 
         array (
             'Illuminate\\Support\\' => 19,
@@ -392,6 +396,10 @@ class ComposerStaticInit963bec9d848196d52e5604ec09efcdb3
         'Laravel\\Sail\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
+        ),
+        'Jorenvh\\Share\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -2703,6 +2711,9 @@ class ComposerStaticInit963bec9d848196d52e5604ec09efcdb3
         'Imagick\\Argument\\Filter' => __DIR__ . '/..' . '/calcinai/php-imagick/src/Imagick/Argument/Filter.php',
         'Imagick\\Argument\\Gravity' => __DIR__ . '/..' . '/calcinai/php-imagick/src/Imagick/Argument/Gravity.php',
         'Imagick\\Geometry' => __DIR__ . '/..' . '/calcinai/php-imagick/src/Imagick/Geometry.php',
+        'Jorenvh\\Share\\Providers\\ShareServiceProvider' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/Providers/ShareServiceProvider.php',
+        'Jorenvh\\Share\\Share' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/Share.php',
+        'Jorenvh\\Share\\ShareFacade' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/ShareFacade.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',

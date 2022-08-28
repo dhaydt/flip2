@@ -1,6 +1,8 @@
 import list from "./components/list.vue";
 import flip from "./components/flip.vue";
 import "bootstrap";
+import VueSocialSharing from 'vue-social-sharing'
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -10,7 +12,7 @@ import "bootstrap";
 require("./bootstrap");
 
 window.Vue = require("vue").default;
-
+Vue.use(VueSocialSharing);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

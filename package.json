@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.2.0",
-        "sass-loader": "^13.0.2"
+        "sass-loader": "^13.0.2",
+        "vue-social-sharing": "^3.0.9"
     }
 }

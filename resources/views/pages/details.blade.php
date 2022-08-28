@@ -2,5 +2,8 @@
 @section('content')
 <div class="container">
     <flip-component :flip="{{ $flip }}"></flip-component>
+    {{-- <div class="social-btn-ap">
+        {!! $share !!}
+    </div> --}}
 </div>
 @endsection

@@ -8,6 +8,8 @@
                 <span class="badge bg-success rounded-pill ms-2">{{
                     sector
                 }}</span>
+
+                <i v-if="type == `private`" class="fa fa-lock ml-auto"></i>
             </h4>
         </div>
         <div class="card-body">
@@ -37,19 +39,23 @@
                 </div>
             </div>
         </div>
-        <div class="card-footer w-100 text-end text-dark text-capitalize p-3 py-4">
-            <a class="share-btn shadow me-2" href="javascript:" data-bs-toggle="tooltip" data-bs-placement="top" title="Share to Facebook"
-                ><i class="fab fa-facebook"></i
-            ></a>
-            <a class="share-btn shadow me-2" href="javascript:" toggle="tooltip" title="Share to Twitter"
-                ><i class="fab fa-twitter"></i
-            ></a>
-            <a class="share-btn shadow me-2" href="javascript:" toggle="tooltip" title="Share to Instagram"
-                ><i class="fab fa-instagram"></i
-            ></a>
-            <a class="share-btn shadow me-2" href="javascript:" toggle="tooltip" title="Share to LinkedIn"
-                ><i class="fab fa-linkedin"></i
-            ></a>
+        <div
+            class="card-footer w-100 text-end text-dark text-capitalize p-3 py-4"
+        >
+            <span class="sosmed" v-for="sos in sosmed">
+                <a href="javascript:" class="share-btn shadow me-2" data-bs-target="tooltib" :title="'Share on ' + sos">
+                    <ShareNetwork
+                        :network="sos"
+                        url="https://news.vuejs.org/issues/180"
+                        title="Say hi to Vite! A brand new, extremely fast development setup for Vue."
+                        description="This week, I’d like to introduce you to 'Vite', which means 'Fast'. It’s a brand new development setup created by Evan You."
+                        quote="The hot reload is so fast it\'s near instant. - Evan You"
+                        hashtags="vuejs,vite"
+                    >
+                        <i :class="'fab fa-' + sos.toLowerCase()"></i>
+                    </ShareNetwork>
+                </a>
+            </span>
         </div>
     </div>
 </template>
@@ -72,6 +78,7 @@ export default {
         this.title = this.flip.title;
         this.sector = this.flip.sector;
         this.desc = this.flip.desc;
+        this.type = this.flip.type;
     },
     methods: {
         changePage() {
@@ -92,23 +99,41 @@ export default {
             pages: [],
             sector: "",
             desc: "",
+            type: "",
+            sosmed: [
+                "Facebook",
+                "Line",
+                "LinkedIn",
+                "Pinterest",
+                "WhatsApp",
+            ],
         };
     },
 };
 </script>
 
 <style>
-.share-btn:nth-child(1){
+i.fa-lock {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    color: #a2a2a2;
+}
+.sosmed:nth-child(1) i {
     color: blue;
 }
-.share-btn:nth-child(2){
-    color: rgb(0, 174, 255);
+.sosmed:nth-child(2) i{
+    color: rgb(2, 219, 38);
 }
-.share-btn:nth-child(3){
-    color: rgb(255, 0, 217);
+.sosmed:nth-child(3) i{
+    color: rgb(0, 140, 255);
 }
-.share-btn:nth-child(4){
-    color: blue;
+.sosmed:nth-child(4) i{
+    color: rgb(210, 5, 9);
+}
+.sosmed:nth-child(5) i{
+    color: rgb(0, 141, 16);
 }
 .share-btn {
     font-size: 24px;
@@ -117,7 +142,7 @@ export default {
     border-radius: 50%;
     transition: 0.5s;
 }
-.share-btn:hover{
+.share-btn:hover {
     background-color: gray;
 }
 
