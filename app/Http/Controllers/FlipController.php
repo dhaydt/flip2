@@ -24,16 +24,16 @@ class FlipController extends Controller
     public function details($id)
     {
         $data['flip'] = Flip::find($id);
-        $data['share'] = \Share::page(
-            'https://www.itsolutionstuff.com',
-            'Your share text comes here',
-        )
-        ->facebook()
-        ->twitter()
-        ->linkedin()
-        ->telegram()
-        ->whatsapp()
-        ->reddit();
+        // $data['share'] = \Share::page(
+        //     'https://www.itsolutionstuff.com',
+        //     'Your share text comes here',
+        // )
+        // ->facebook()
+        // ->twitter()
+        // ->linkedin()
+        // ->telegram()
+        // ->whatsapp()
+        // ->reddit();
 
         return view('pages.details', $data);
     }

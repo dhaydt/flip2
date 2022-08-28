@@ -123,10 +123,6 @@ class ComposerStaticInit963bec9d848196d52e5604ec09efcdb3
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
         ),
-        'J' => 
-        array (
-            'Jorenvh\\Share\\' => 14,
-        ),
         'I' => 
         array (
             'Illuminate\\Support\\' => 19,
@@ -397,10 +393,6 @@ class ComposerStaticInit963bec9d848196d52e5604ec09efcdb3
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
         ),
-        'Jorenvh\\Share\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src',
-        ),
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Macroable',
@@ -530,6 +522,7 @@ class ComposerStaticInit963bec9d848196d52e5604ec09efcdb3
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\FlipController' => __DIR__ . '/../..' . '/app/Http/Controllers/FlipController.php',
+        'App\\Http\\Controllers\\ShareController' => __DIR__ . '/../..' . '/app/Http/Controllers/ShareController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -2711,9 +2704,6 @@ class ComposerStaticInit963bec9d848196d52e5604ec09efcdb3
         'Imagick\\Argument\\Filter' => __DIR__ . '/..' . '/calcinai/php-imagick/src/Imagick/Argument/Filter.php',
         'Imagick\\Argument\\Gravity' => __DIR__ . '/..' . '/calcinai/php-imagick/src/Imagick/Argument/Gravity.php',
         'Imagick\\Geometry' => __DIR__ . '/..' . '/calcinai/php-imagick/src/Imagick/Geometry.php',
-        'Jorenvh\\Share\\Providers\\ShareServiceProvider' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/Providers/ShareServiceProvider.php',
-        'Jorenvh\\Share\\Share' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/Share.php',
-        'Jorenvh\\Share\\ShareFacade' => __DIR__ . '/..' . '/jorenvanhocht/laravel-share/src/ShareFacade.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',
