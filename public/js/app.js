@@ -5378,7 +5378,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["flip"],
+  props: ["flip", "route"],
   components: {
     Flipbook: flipbook_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
@@ -30772,14 +30772,11 @@ var render = function () {
                 {
                   attrs: {
                     network: sos,
-                    url: "https://news.vuejs.org/issues/180",
-                    title:
-                      "Say hi to Vite! A brand new, extremely fast development setup for Vue.",
-                    description:
-                      "This week, I’d like to introduce you to 'Vite', which means 'Fast'. It’s a brand new development setup created by Evan You.",
-                    quote:
-                      "The hot reload is so fast it\\'s near instant. - Evan You",
-                    hashtags: "vuejs,vite",
+                    url: _vm.route,
+                    title: _vm.title,
+                    description: _vm.desc,
+                    quote: _vm.type,
+                    hashtags: _vm.sector,
                   },
                 },
                 [_c("i", { class: "fab fa-" + sos.toLowerCase() })]
