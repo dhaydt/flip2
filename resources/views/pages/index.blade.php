@@ -39,12 +39,42 @@
                             <textarea name="desc" id="" cols="30" rows="3" class="form-control ms-3"></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="desc" class="form-label">4. Sector</label>
-                            <select class="form-select ms-3" name="sector" aria-label="Default select example">
+                            <label for="desc" class="form-label">4. Category / Sectors</label>
+                            <select class="form-select ms-3" name="sector" aria-label="Default select example" required>
                                 <option selected>Select sector</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="Agritect">Agritect</option>
+                                <option value="B2B">B2B</option>
+                                <option value="B2C">B2C</option>
+                                <option value="BioTech">BioTech</option>
+                                <option value="Climate">Climate</option>
+                                <option value="Crypto">Crypto</option>
+                                <option value="DeepTech">DeepTech</option>
+                                <option value="Ecommerce">Ecommerce</option>
+                                <option value="EdTech">EdTech</option>
+                                <option value="Energy">Energy</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="FinTech">FinTech</option>
+                                <option value="Food & Deverages">Food & Deverages</option>
+                                <option value="Gaming">Gaming</option>
+                                <option value="HR">HR</option>
+                                <option value="Hardware">Hardware</option>
+                                <option value="Health">Health</option>
+                                <option value="Industry">Industry</option>
+                                <option value="Logistics">Logistics</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="MarketPlace">MarketPlace</option>
+                                <option value="Materials">Materials</option>
+                                <option value="MedTech">MedTech</option>
+                                <option value="BioTech">Media</option>
+                                <option value="Mobility">Mobility</option>
+                                <option value="Music">Music</option>
+                                <option value="Productivity">Productivity</option>
+                                <option value="PropTech">PropTech</option>
+                                <option value="Saas">Saas</option>
+                                <option value="Security">Security</option>
+                                <option value="Social">Social</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Travel & Hospitality">Travel & Hospitality</option>
                             </select>
                         </div>
                         <div class="mb-3">

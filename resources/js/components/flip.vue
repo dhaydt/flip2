@@ -3,6 +3,7 @@
         <div class="card-header w-100">
             <h5 class="card-title text-capitalize w-100">
                 {{ title }}
+                <span class="badge bg-success rounded-pill ms-2">{{ sector }}</span>
             </h5>
         </div>
         <div class="card-body">
@@ -44,6 +45,7 @@ export default {
         }
         this.pages = dataImg;
         this.title = this.flip.title;
+        this.sector = this.flip.sector;
     },
     methods: {
         changePage() {
@@ -62,6 +64,7 @@ export default {
             title: "",
             singlePage: false,
             pages: [],
+            sector: '',
         };
     },
 };

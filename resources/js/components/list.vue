@@ -3,6 +3,9 @@
         <a :href="`/details/`+id" class="card shadow-sm">
             <div class="card-header">
                 <h6 class="card-title text-capitalize">{{ title }}</h6>
+                <div class="d-flex justify-content-end">
+                    <span class="badge bg-success rounded-pill ms-4">{{ sector }}</span>
+                </div>
             </div>
             <div class="card-body">
                 <img :src="cover" alt="" />
@@ -25,9 +28,10 @@ export default {
         }
         this.cover = storage + this.flip.name + "-0.jpg";
         this.title = this.flip.title;
+        this.sector = this.flip.sector;
         this.desc = this.flip.desc;
         this.id = this.flip.id;
-        // this.title = this.flip.title;
+        console.log('sector',this.sector);
     },
     data() {
         return {
@@ -35,6 +39,7 @@ export default {
             title: "",
             desc: "",
             id: "",
+            sector: ''
         };
     },
 };

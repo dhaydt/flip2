@@ -5344,6 +5344,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["flip"],
@@ -5361,6 +5362,7 @@ __webpack_require__.r(__webpack_exports__);
 
     this.pages = dataImg;
     this.title = this.flip.title;
+    this.sector = this.flip.sector;
   },
   methods: {
     changePage: function changePage() {
@@ -5377,7 +5379,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       title: "",
       singlePage: false,
-      pages: []
+      pages: [],
+      sector: ''
     };
   }
 });
@@ -5411,6 +5414,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["flip"],
   mounted: function mounted() {
@@ -5423,15 +5429,18 @@ __webpack_require__.r(__webpack_exports__);
 
     this.cover = storage + this.flip.name + "-0.jpg";
     this.title = this.flip.title;
+    this.sector = this.flip.sector;
     this.desc = this.flip.desc;
-    this.id = this.flip.id; // this.title = this.flip.title;
+    this.id = this.flip.id;
+    console.log('sector', this.sector);
   },
   data: function data() {
     return {
       cover: "",
       title: "",
       desc: "",
-      id: ""
+      id: "",
+      sector: ''
     };
   }
 });
@@ -5448,6 +5457,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_list_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/list.vue */ "./resources/js/components/list.vue");
 /* harmony import */ var _components_flip_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/flip.vue */ "./resources/js/components/flip.vue");
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+
 
 
 /**
@@ -30631,7 +30642,10 @@ var render = function () {
   return _c("div", { staticClass: "card shadow", attrs: { id: "flip" } }, [
     _c("div", { staticClass: "card-header w-100" }, [
       _c("h5", { staticClass: "card-title text-capitalize w-100" }, [
-        _vm._v("\n            " + _vm._s(_vm.title) + "\n        "),
+        _vm._v("\n            " + _vm._s(_vm.title) + "\n            "),
+        _c("span", { staticClass: "badge bg-success rounded-pill ms-2" }, [
+          _vm._v(_vm._s(_vm.sector)),
+        ]),
       ]),
     ]),
     _vm._v(" "),
@@ -30707,6 +30721,12 @@ var render = function () {
         _c("div", { staticClass: "card-header" }, [
           _c("h6", { staticClass: "card-title text-capitalize" }, [
             _vm._v(_vm._s(_vm.title)),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex justify-content-end" }, [
+            _c("span", { staticClass: "badge bg-success rounded-pill ms-4" }, [
+              _vm._v(_vm._s(_vm.sector)),
+            ]),
           ]),
         ]),
         _vm._v(" "),

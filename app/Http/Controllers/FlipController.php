@@ -16,7 +16,7 @@ class FlipController extends Controller
 
     public function list()
     {
-        $data['flip'] = Flip::get();
+        $data['flip'] = Flip::where('type', 'public')->get();
 
         return view('pages.list', $data);
     }
@@ -31,7 +31,7 @@ class FlipController extends Controller
     public function generate(Request $request)
     {
         $pdf = $request->file('filePdf');
-        $name = urlencode($request->title);
+        $name = $request->title;
         $type = $request->type;
         $sector = $request->sector;
         $desc = $request->desc;
