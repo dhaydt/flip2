@@ -5345,6 +5345,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["flip"],
@@ -5363,6 +5388,7 @@ __webpack_require__.r(__webpack_exports__);
     this.pages = dataImg;
     this.title = this.flip.title;
     this.sector = this.flip.sector;
+    this.desc = this.flip.desc;
   },
   methods: {
     changePage: function changePage() {
@@ -5380,7 +5406,8 @@ __webpack_require__.r(__webpack_exports__);
       title: "",
       singlePage: false,
       pages: [],
-      sector: ''
+      sector: "",
+      desc: ""
     };
   }
 });
@@ -10806,7 +10833,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nhtml,\nbody {\n    margin: 0;\n    padding: 0;\n}\n#flip {\n    font-family: \"Avenir\", Helvetica, Arial, sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    /* max-height: 90vh; */\n    width: 100%;\n    display: flex;\n    overflow: hidden;\n    flex-direction: column;\n    align-items: center;\n    /* background-color: #333; */\n    color: #ccc;\n}\na {\n    color: inherit;\n}\n.flipbook > button:first-child {\n    position: absolute;\n    top: 50%;\n    left: 10px;\n    border-radius: 50%;\n    z-index: 1;\n    padding: 8px 15px;\n}\n.flipbook > button:nth-child(2) {\n    position: absolute;\n    top: 50%;\n    right: 10px;\n    border-radius: 50%;\n    padding: 8px 15px;\n    z-index: 1;\n}\n.action-bar {\n    width: 100%;\n    height: 50px;\n    padding: 10px 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.action-bar .btn {\n    font-size: 30px;\n    color: #999;\n}\n.action-bar .btn svg {\n    bottom: 0;\n}\n.action-bar .btn:not(:first-child) {\n    margin-left: 10px;\n}\n.has-mouse .action-bar .btn:hover {\n    color: #ccc;\n    filter: drop-shadow(1px 1px 5px #000);\n    cursor: pointer;\n}\n.action-bar .btn:active {\n    filter: none !important;\n}\n.btn-left.disabled {\n    color: #666;\n    pointer-events: none;\n}\n.btn-right.disabled {\n    color: #666;\n    pointer-events: none;\n}\n.action-bar .page-num {\n    font-size: 12px;\n    margin-left: 10px;\n}\n.card-body .flipbook .viewport {\n    width: 80vw;\n    height: calc(100vh - 50px - 40px);\n}\n.card-body .flipbook .bounding-box {\n    box-shadow: 0 0 20px #000;\n}\n.credit {\n    font-size: 12px;\n    line-height: 20px;\n    margin: 10px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.share-btn:nth-child(1){\n    color: blue;\n}\n.share-btn:nth-child(2){\n    color: rgb(0, 174, 255);\n}\n.share-btn:nth-child(3){\n    color: rgb(255, 0, 217);\n}\n.share-btn:nth-child(4){\n    color: blue;\n}\n.share-btn {\n    font-size: 24px;\n    padding: 13px;\n    border: 1px solid #a2a2a2;\n    border-radius: 50%;\n    transition: 0.5s;\n}\n.share-btn:hover{\n    background-color: gray;\n}\nhtml,\nbody {\n    margin: 0;\n    padding: 0;\n}\n#flip {\n    font-family: \"Avenir\", Helvetica, Arial, sans-serif;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    /* max-height: 90vh; */\n    width: 100%;\n    display: flex;\n    overflow: hidden;\n    flex-direction: column;\n    align-items: center;\n    /* background-color: #333; */\n    color: #ccc;\n}\na {\n    color: inherit;\n}\n.flipbook > button:first-child {\n    position: absolute;\n    top: 50%;\n    left: 10px;\n    border-radius: 50%;\n    z-index: 1;\n    padding: 8px 15px;\n}\n.flipbook > button:nth-child(2) {\n    position: absolute;\n    top: 50%;\n    right: 10px;\n    border-radius: 50%;\n    padding: 8px 15px;\n    z-index: 1;\n}\n.action-bar {\n    width: 100%;\n    height: 50px;\n    padding: 10px 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.action-bar .btn {\n    font-size: 30px;\n    color: #999;\n}\n.action-bar .btn svg {\n    bottom: 0;\n}\n.action-bar .btn:not(:first-child) {\n    margin-left: 10px;\n}\n.has-mouse .action-bar .btn:hover {\n    color: #ccc;\n    filter: drop-shadow(1px 1px 5px #000);\n    cursor: pointer;\n}\n.action-bar .btn:active {\n    filter: none !important;\n}\n.btn-left.disabled {\n    color: #666;\n    pointer-events: none;\n}\n.btn-right.disabled {\n    color: #666;\n    pointer-events: none;\n}\n.action-bar .page-num {\n    font-size: 12px;\n    margin-left: 10px;\n}\n.card-body .flipbook .viewport {\n    width: 80vw;\n    height: calc(100vh - 50px - 40px);\n}\n.card-body .flipbook .bounding-box {\n    box-shadow: 0 0 20px #000;\n}\n.credit {\n    font-size: 12px;\n    line-height: 20px;\n    margin: 10px;\n}\n.card-body {\n    color: #6e6e6e;\n    font-weight: 600;\n}\n.card-title {\n    font-weight: 900;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -30639,14 +30666,21 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card shadow", attrs: { id: "flip" } }, [
+  return _c("div", { staticClass: "card shadow my-5", attrs: { id: "flip" } }, [
     _c("div", { staticClass: "card-header w-100" }, [
-      _c("h5", { staticClass: "card-title text-capitalize w-100" }, [
-        _vm._v("\n            " + _vm._s(_vm.title) + "\n            "),
-        _c("span", { staticClass: "badge bg-success rounded-pill ms-2" }, [
-          _vm._v(_vm._s(_vm.sector)),
-        ]),
-      ]),
+      _c(
+        "h4",
+        {
+          staticClass:
+            "card-title text-capitalize w-100 text-center text-dark text-uppercase",
+        },
+        [
+          _vm._v("\n            " + _vm._s(_vm.title) + "\n            "),
+          _c("span", { staticClass: "badge bg-success rounded-pill ms-2" }, [
+            _vm._v(_vm._s(_vm.sector)),
+          ]),
+        ]
+      ),
     ]),
     _vm._v(" "),
     _c(
@@ -30685,12 +30719,89 @@ var render = function () {
             },
           ]),
         }),
+        _vm._v(" "),
+        _c("div", { staticClass: "content" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row text-capitalize text-gray mx-5" }, [
+              _c("p", [_vm._v(_vm._s(_vm.desc))]),
+            ]),
+          ]),
+        ]),
       ],
       1
     ),
+    _vm._v(" "),
+    _vm._m(0),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "card-footer w-100 text-end text-dark text-capitalize p-3 py-4",
+      },
+      [
+        _c(
+          "a",
+          {
+            staticClass: "share-btn shadow me-2",
+            attrs: {
+              href: "javascript:",
+              "data-bs-toggle": "tooltip",
+              "data-bs-placement": "top",
+              title: "Share to Facebook",
+            },
+          },
+          [_c("i", { staticClass: "fab fa-facebook" })]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "share-btn shadow me-2",
+            attrs: {
+              href: "javascript:",
+              toggle: "tooltip",
+              title: "Share to Twitter",
+            },
+          },
+          [_c("i", { staticClass: "fab fa-twitter" })]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "share-btn shadow me-2",
+            attrs: {
+              href: "javascript:",
+              toggle: "tooltip",
+              title: "Share to Instagram",
+            },
+          },
+          [_c("i", { staticClass: "fab fa-instagram" })]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "share-btn shadow me-2",
+            attrs: {
+              href: "javascript:",
+              toggle: "tooltip",
+              title: "Share to LinkedIn",
+            },
+          },
+          [_c("i", { staticClass: "fab fa-linkedin" })]
+        ),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 

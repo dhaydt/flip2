@@ -53,6 +53,8 @@ class FlipController extends Controller
         $save->count = count($files);
         $save->save();
 
-        return redirect()->route('list');
+        $last = Flip::orderBy('created_at', 'desc')->first();
+
+        return redirect()->route('details', ['id' => $last->id]);
     }
 }

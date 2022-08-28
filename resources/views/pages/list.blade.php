@@ -8,7 +8,6 @@
 
 </style>
 @section('content')
-{{-- {{ dd($flip) }} --}}
 <div class="mt-5">
     <div class="row justify-content-center">
         @foreach ($flip as $f)
