@@ -14,7 +14,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 shadow">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">
-        <img src="{{ asset('img/logo1.png') }}" alt=""></a>
+        <img src="{{ asset('images/logo1.png') }}" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
