@@ -19,9 +19,9 @@ class FlipController extends Controller
         if ($sector == 'all') {
             $data['flip'] = Flip::where('type', 'public')->get();
         } else {
-            $data['flip'] = Flip::where(['sector' => $sector], ['type' => 'public'])->get();
+            $data['flip'] = Flip::where(['type' => 'public', 'sector' => $sector])->get();
         }
-        $data['sector'] = Flip::pluck('sector', 'sector');
+        $data['sector'] = Flip::where('type', 'public')->pluck('sector', 'sector');
 
         return view('pages.list', $data);
     }
