@@ -26,5 +26,5 @@ Route::get('/storage-link', function () {
 Route::get('/', [FlipController::class, 'index'])->name('home');
 
 Route::post('img', [FlipController::class, 'generate'])->name('generate');
-Route::get('list', [FlipController::class, 'list'])->name('list');
+Route::get('list/{sector}', [FlipController::class, 'list'])->name('list');
 Route::get('details/{id}', [FlipController::class, 'details'])->name('details');

@@ -43,7 +43,7 @@
             class="card-footer w-100 text-end text-dark text-capitalize p-3 py-4"
         >
             <span class="sosmed" v-for="sos in sosmed">
-                <a href="javascript:" class="share-btn shadow me-2" data-bs-target="tooltib" :title="'Share on ' + sos">
+                <a href="javascript:" class="share-btn shadow me-2" data-bs-target="tooltip" :title="'Share on ' + sos">
                     <ShareNetwork
                         :network="sos"
                         :url="route"
@@ -53,6 +53,20 @@
                         :hashtags="sector"
                     >
                         <i :class="'fab fa-' + sos.toLowerCase()"></i>
+                    </ShareNetwork>
+                </a>
+            </span>
+            <span class="sosmed">
+                <a href="javascript:" class="share-btn shadow me-2" data-bs-target="tooltip" title="Share on Email">
+                    <ShareNetwork
+                        network="Email"
+                        :url="route"
+                        :title="title"
+                        :description="desc"
+                        :quote="type"
+                        :hashtags="sector"
+                    >
+                        <i class="fas fa-envelope"></i>
                     </ShareNetwork>
                 </a>
             </span>
@@ -134,6 +148,9 @@ i.fa-lock {
 }
 .sosmed:nth-child(5) i{
     color: rgb(0, 141, 16);
+}
+.sosmed:nth-child(6) i{
+    color: rgb(255, 54, 104);
 }
 .share-btn {
     font-size: 24px;

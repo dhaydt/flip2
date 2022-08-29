@@ -14,9 +14,14 @@ class FlipController extends Controller
         return view('pages.index');
     }
 
-    public function list()
+    public function list($sector)
     {
-        $data['flip'] = Flip::where('type', 'public')->get();
+        if ($sector == 'all') {
+            $data['flip'] = Flip::where('type', 'public')->get();
+        } else {
+            $data['flip'] = Flip::where(['sector' => $sector], ['type' => 'public'])->get();
+        }
+        $data['sector'] = Flip::pluck('sector', 'sector');
 
         return view('pages.list', $data);
     }
@@ -24,16 +29,6 @@ class FlipController extends Controller
     public function details($id)
     {
         $data['flip'] = Flip::find($id);
-        // $data['share'] = \Share::page(
-        //     'https://www.itsolutionstuff.com',
-        //     'Your share text comes here',
-        // )
-        // ->facebook()
-        // ->twitter()
-        // ->linkedin()
-        // ->telegram()
-        // ->whatsapp()
-        // ->reddit();
 
         return view('pages.details', $data);
     }
