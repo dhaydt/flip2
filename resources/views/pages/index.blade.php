@@ -1,4 +1,9 @@
 @extends('layouts.app')
+<style>
+    #pass{
+        transition: .5s;
+    }
+</style>
 @section('content')
 <div class="container-form mt-4">
     <div class="row justify-content-center">
@@ -16,19 +21,23 @@
                             <label for="exampleFormControlInput1" class="form-label">1. Is your FlipBook Private or
                                 Public</label><br>
                             <div class="form-check form-check-inline ms-3">
-                                <input class="form-check-input" type="radio" name="type" value="private"
+                                <input class="form-check-input" type="radio" name="type" value="private" onclick="showPassword(true)"
                                     id="flexRadioDefault1">
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     Private
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="type" value="public"
+                                <input class="form-check-input" type="radio" name="type" value="public" onclick="showPassword(false)"
                                     id="flexRadioDefault1">
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     Public
                                 </label>
                             </div>
+                        </div>
+                        <div class="mb-3 d-none" id="pass">
+                            <label for="title" class="form-label">Password For Private FlipBook</label>
+                            <input type="text" name="password" class="form-control ms-3" id="title" placeholder="Your flipbook password">
                         </div>
                         <div class="mb-3">
                             <label for="title" class="form-label">2. Title</label>
@@ -90,3 +99,12 @@
         </div>
     </div>
     @endsection
+<script>
+    function showPassword(val){
+        if(val == true){
+            $('#pass').removeClass(`d-none`);
+        }else{
+            $('#pass').addClass(`d-none`);
+        }
+    }
+</script>

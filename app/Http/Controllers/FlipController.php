@@ -17,13 +17,21 @@ class FlipController extends Controller
     public function list($sector)
     {
         if ($sector == 'all') {
-            $data['flip'] = Flip::where('type', 'public')->get();
+            $data['flip'] = Flip::where('type', 'public')->orderBy('created_at', 'desc')->get();
         } else {
-            $data['flip'] = Flip::where(['type' => 'public', 'sector' => $sector])->get();
+            $data['flip'] = Flip::where(['type' => 'public', 'sector' => $sector])->orderBy('created_at', 'desc')->get();
         }
         $data['sector'] = Flip::where('type', 'public')->pluck('sector', 'sector');
 
         return view('pages.list', $data);
+    }
+
+    public function private(Request $request)
+    {
+        $data['flip'] = Flip::where(['type' => 'private', 'password' => $request->password])->orderBy('created_at', 'desc')->get();
+        $data['sector'] = Flip::where('type', 'public')->pluck('sector', 'sector');
+
+        return view('pages.private', $data);
     }
 
     public function details($id)
@@ -39,6 +47,7 @@ class FlipController extends Controller
         $name = $request->title;
         $type = $request->type;
         $sector = $request->sector;
+        $password = $request->password;
         $desc = $request->desc;
         $imagick = new Imagick();
 
@@ -55,6 +64,7 @@ class FlipController extends Controller
         $save->type = $type;
         $save->sector = $sector;
         $save->desc = $desc;
+        $save->password = $password;
         $save->count = count($files);
         $save->save();
 
