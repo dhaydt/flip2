@@ -46,6 +46,7 @@ class FlipController extends Controller
         $pdf = $request->file('filePdf');
         $name = $request->title;
         $type = $request->type;
+        $email = $request->email;
         $sector = $request->sector;
         $password = $request->password;
         $desc = $request->desc;
@@ -61,6 +62,7 @@ class FlipController extends Controller
         $save = new Flip();
         $save->name = $name;
         $save->title = $name;
+        $save->email = $email;
         $save->type = $type;
         $save->sector = $sector;
         $save->desc = $desc;

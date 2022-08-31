@@ -5390,6 +5390,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["flip", "route"],
@@ -5410,6 +5411,7 @@ __webpack_require__.r(__webpack_exports__);
     this.sector = this.flip.sector;
     this.desc = this.flip.desc;
     this.type = this.flip.type;
+    this.email = this.flip.email;
   },
   methods: {
     changePage: function changePage() {
@@ -5429,6 +5431,7 @@ __webpack_require__.r(__webpack_exports__);
       pages: [],
       sector: "",
       desc: "",
+      email: "",
       type: "",
       sosmed: ["Facebook", "Line", "LinkedIn", "Pinterest", "WhatsApp"]
     };
@@ -30705,6 +30708,10 @@ var render = function () {
           _vm._v("\n            " + _vm._s(_vm.title) + "\n            "),
           _c("span", { staticClass: "badge bg-success rounded-pill ms-2" }, [
             _vm._v(_vm._s(_vm.sector)),
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "badge badge-warning rounded-pill ms-2" }, [
+            _vm._v(_vm._s(_vm.email)),
           ]),
           _vm._v(" "),
           _vm.type == "private"

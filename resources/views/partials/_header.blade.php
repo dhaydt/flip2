@@ -62,7 +62,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Private FlipBook</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Private StarterHolic</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <form action="{{ route('private') }}" method="post">
@@ -70,7 +70,7 @@
                             @csrf
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">Password</span>
-                                <input type="text" class="form-control" name="password" placeholder="Input Flipbook Password" required>
+                                <input type="text" class="form-control" name="password" placeholder="Input StarterHolic Password" required>
                             </div>
                         </div>
                         <div class="modal-footer">
