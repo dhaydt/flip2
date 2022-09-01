@@ -30,8 +30,8 @@ export default {
         this.title = this.flip.title;
         this.sector = this.flip.sector;
         this.desc = this.flip.desc;
-        this.id = this.flip.id;
-        console.log('sector',this.sector);
+        this.id = this.flip.slug;
+        console.log('slug',this.id);
     },
     data() {
         return {

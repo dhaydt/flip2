@@ -5484,8 +5484,8 @@ __webpack_require__.r(__webpack_exports__);
     this.title = this.flip.title;
     this.sector = this.flip.sector;
     this.desc = this.flip.desc;
-    this.id = this.flip.id;
-    console.log('sector', this.sector);
+    this.id = this.flip.slug;
+    console.log('slug', this.id);
   },
   data: function data() {
     return {

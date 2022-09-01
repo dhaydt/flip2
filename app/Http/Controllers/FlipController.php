@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Flip;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 use Imagick;
 
 class FlipController extends Controller
@@ -36,7 +37,7 @@ class FlipController extends Controller
 
     public function details($id)
     {
-        $data['flip'] = Flip::find($id);
+        $data['flip'] = Flip::where('slug', $id)->first();
 
         return view('pages.details', $data);
     }
@@ -67,11 +68,12 @@ class FlipController extends Controller
         $save->sector = $sector;
         $save->desc = $desc;
         $save->password = $password;
+        $save->slug = $type.Str::random(50);
         $save->count = count($files);
         $save->save();
 
         $last = Flip::orderBy('created_at', 'desc')->first();
 
-        return redirect()->route('details', ['id' => $last->id]);
+        return redirect()->route('details', ['id' => $last->slug]);
     }
 }

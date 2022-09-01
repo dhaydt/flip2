@@ -40,6 +40,7 @@
                             <label for="title" class="form-label">Password For Private StarterHolic</label>
                             <input type="text" name="password" class="form-control ms-3" id="title"
                                 placeholder="Your StarterHolic password">
+                                <span class="text-danger ms-4" style="font-size: 11px;">Please note your password to open all of your private StarterHolic's</span>
                         </div>
                         <div class="mb-3">
                             <label for="title" class="form-label">2. Email</label>
