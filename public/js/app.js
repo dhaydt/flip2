@@ -30710,10 +30710,6 @@ var render = function () {
             _vm._v(_vm._s(_vm.sector)),
           ]),
           _vm._v(" "),
-          _c("span", { staticClass: "badge badge-warning rounded-pill ms-2" }, [
-            _vm._v(_vm._s(_vm.email)),
-          ]),
-          _vm._v(" "),
           _vm.type == "private"
             ? _c("i", { staticClass: "fa fa-lock ml-auto" })
             : _vm._e(),

@@ -27,6 +27,9 @@
             <list-component :flip="{{ $f }}"></list-component>
         </div>
         @endforeach
+        @if (count($flip) == 0)
+            No data Found
+        @endif
     </div>
 </div>
 @endsection

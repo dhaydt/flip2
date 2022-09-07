@@ -29,3 +29,4 @@ Route::post('img', [FlipController::class, 'generate'])->name('generate');
 Route::get('list/{sector}', [FlipController::class, 'list'])->name('list');
 Route::get('details/{id}', [FlipController::class, 'details'])->name('details');
 Route::post('private', [FlipController::class, 'private'])->name('private');
+Route::get('find', [FlipController::class, 'find'])->name('find');

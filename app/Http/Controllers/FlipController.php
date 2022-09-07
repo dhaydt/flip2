@@ -15,6 +15,15 @@ class FlipController extends Controller
         return view('pages.index');
     }
 
+    public function find(Request $request)
+    {
+        $data['flip'] = Flip::where('type', 'public');
+        $data['flip'] = $data['flip']->where('name', 'like', '%'.$request->find.'%')->get();
+        $data['sector'] = Flip::where('type', 'public')->pluck('sector', 'sector');
+
+        return view('pages.list', $data);
+    }
+
     public function list($sector)
     {
         if ($sector == 'all') {

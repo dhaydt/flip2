@@ -8,7 +8,7 @@
                 <span class="badge bg-success rounded-pill ms-2">{{
                     sector
                 }}</span>
-                <span class="badge badge-warning rounded-pill ms-2">{{ email }}</span>
+                <!-- <span class="badge badge-warning rounded-pill ms-2">{{ email }}</span> -->
 
                 <i v-if="type == `private`" class="fa fa-lock ml-auto"></i>
             </h4>
