@@ -70,7 +70,7 @@
                             @csrf
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">Password</span>
-                                <input type="text" class="form-control" name="password" placeholder="Input StarterHolic Password" required>
+                                <input type="text" class="form-control" name="password" placeholder="Input Starterholic Password" required>
                             </div>
                         </div>
                         <div class="modal-footer">
