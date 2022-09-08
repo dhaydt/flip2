@@ -5402,8 +5402,12 @@ __webpack_require__.r(__webpack_exports__);
     var storage = "/storage/" + this.flip.name + "/";
     var dataImg = [null];
 
-    for (var i = 0; i < Number(this.flip.count); i++) {
-      dataImg.push(storage + this.flip.name + "-" + i + ".jpg");
+    if (this.flip.count != 1) {
+      for (var i = 0; i < Number(this.flip.count); i++) {
+        dataImg.push(storage + this.flip.name + "-" + i + ".jpg");
+      }
+    } else {
+      dataImg.push(storage + this.flip.name + ".jpg");
     }
 
     this.pages = dataImg;
@@ -5480,7 +5484,12 @@ __webpack_require__.r(__webpack_exports__);
       dataImg.push(storage + this.flip.name + "-" + i + ".jpg");
     }
 
-    this.cover = storage + this.flip.name + "-0.jpg";
+    if (this.flip.count > 1) {
+      this.cover = storage + this.flip.name + "-0.jpg";
+    } else {
+      this.cover = storage + this.flip.name + ".jpg";
+    }
+
     this.title = this.flip.title;
     this.sector = this.flip.sector;
     this.desc = this.flip.desc;

@@ -60,6 +60,10 @@ class FlipController extends Controller
         $sector = $request->sector;
         $password = $request->password;
         $desc = $request->desc;
+
+        $pdftext = file_get_contents($pdf);
+        $num = preg_match_all("/\/Page\W/", $pdftext, $dummy);
+
         $imagick = new Imagick();
 
         $imagick->readImage($pdf);

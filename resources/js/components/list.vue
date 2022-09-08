@@ -26,7 +26,11 @@ export default {
         for (let i = 0; i < Number(this.flip.count); i++) {
             dataImg.push(storage + this.flip.name + "-" + i + ".jpg");
         }
-        this.cover = storage + this.flip.name + "-0.jpg";
+        if(this.flip.count > 1){
+            this.cover = storage + this.flip.name + "-0.jpg";
+        }else{
+            this.cover = storage + this.flip.name + ".jpg";
+        }
         this.title = this.flip.title;
         this.sector = this.flip.sector;
         this.desc = this.flip.desc;

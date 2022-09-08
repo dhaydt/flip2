@@ -86,8 +86,12 @@ export default {
         var flipData = this.flip;
         var storage = "/storage/" + this.flip.name + "/";
         var dataImg = [null];
-        for (let i = 0; i < Number(this.flip.count); i++) {
-            dataImg.push(storage + this.flip.name + "-" + i + ".jpg");
+        if(this.flip.count != 1){
+            for (let i = 0; i < Number(this.flip.count); i++) {
+                dataImg.push(storage + this.flip.name + "-" + i + ".jpg");
+            }
+        }else{
+            dataImg.push(storage + this.flip.name + ".jpg");
         }
         this.pages = dataImg;
         this.title = this.flip.title;
