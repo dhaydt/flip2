@@ -106,7 +106,7 @@
                                 </div>
                                 <a id="signout_button" class="d-none" onclick="handleSignoutClick()">Sign Out</a>
                             </div>
-                            <div class="text-danger ms-4" style="font-size: 10px;">Max PDF size 5MB</div>
+                            <div class="text-danger ms-4" style="font-size: 10px;">Max PDF size 10MB</div>
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-end">
