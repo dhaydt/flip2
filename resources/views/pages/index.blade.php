@@ -121,7 +121,7 @@
         function upload_check()
             {
                 var upl = document.getElementById("formFile");
-                var max = 5000000;
+                var max = 10000000;
                 // console.log('size', upl.files[0].size)
 
                 if(upl.files[0].size > max)
