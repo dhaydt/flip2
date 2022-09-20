@@ -23,7 +23,7 @@
     </div>
     <div class="row justify-content-center card-flip">
         @foreach ($flip as $f)
-        <div class="col-md-3 col-2 mb-4">
+        <div class="col-md-3 col-sm-6 col-12 mb-4">
             <list-component :flip="{{ $f }}"></list-component>
         </div>
         @endforeach
